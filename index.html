@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* let requset = new XMLHttpRequest()
+        requset.open("POST","https://jsonplaceholder.typicode.com/todos")
+        requset.responseType = "json";
+        let bar = `{
+	"userId": 1,
+	"title": "delectus aut autem",
+	"completed": false
+}`
+requset.send(bar);
+requset.onload =function(){
+    if(requset.status>=200 &&requset.status<300){
+        console.log(requset.response)
+    }else{
+        alert("error")
+    }
+}*/
+let requ =new XMLHttpRequest();
+requ.open("PUT","https://jsonplaceholder.typicode.com/posts/1")
+requ.responseType = "json";
+let bodys ={
+	"userId": 1,
+	"title": "hello mustapha",
+	"completed": false,
+    "id" :"7"
+}
+requ.send(bodys);
+requ.onload =function(){
+    if(requ.status>=200&&requ.status<300){
+        let respent = requ.response
+        alert("update sucsses fully")
+    }else{
+        alert("error")
+    }
+}
+    </script>
+    
+</body>
+</html>
